@@ -7,10 +7,14 @@ Instrucciones:
   http://localhost:8888/?name=will
 */
 
-$names = [
-    'Jeff',
-    'John',
-    'Mary'
+$person = [
+    'age' => 31,
+    'hair' => 'brown',
+    'carrer' => 'web developer'
 ];
+
+$person['name'] = 'Jeffrey';
+
+unset($person['age']);
 
 require 'index.view.php';
