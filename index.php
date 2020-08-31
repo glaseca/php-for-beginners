@@ -7,6 +7,14 @@ Instrucciones:
   http://localhost:8888
 */
 
+require 'functions.php';
+
+if(adult(15)){
+    echo 'You are an adult.';
+} else { 
+    echo 'You are not old enough.';
+}
+
 $task = [
     'title' => 'Finish homework',
     'due' => 'Today',
