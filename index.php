@@ -7,19 +7,29 @@ Instrucciones:
   http://localhost:8888
 */
 
-require 'functions.php';
+class Task {
+    public $description;
+    public $completed = false;
 
-if(adult(15)){
-    echo 'You are an adult.';
-} else { 
-    echo 'You are not old enough.';
+    public function __construct($description){
+        $this->description = $description;
+    }
+
+    public function complete(){
+        $this->completed = true;
+    }
+
+    public function isComplete(){
+        return $this->completed;
+    }
 }
 
-$task = [
-    'title' => 'Finish homework',
-    'due' => 'Today',
-    'assigned_to' => 'Jeffrey',
-    'completed' => true,
+$tasks = [
+    new Task ('Go to the store'), // 0
+    new Task ('Finish my screencast'), // 1
+    new Task ('Clean my room')  //2
 ];
+
+$tasks[0]->complete();
 
 require 'index.view.php';
