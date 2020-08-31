@@ -7,6 +7,10 @@ Instrucciones:
   http://localhost:8888/?name=will
 */
 
-$greeting = 'Hello World';
+$names = [
+    'Jeff',
+    'John',
+    'Mary'
+];
 
 require 'index.view.php';
