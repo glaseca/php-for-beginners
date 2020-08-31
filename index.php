@@ -4,17 +4,14 @@ Instrucciones:
  # Desde el terminal
   php -S localhost:8888
  # Desde el navegador
-  http://localhost:8888/?name=will
+  http://localhost:8888
 */
 
-$person = [
-    'age' => 31,
-    'hair' => 'brown',
-    'carrer' => 'web developer'
+$task = [
+    'title' => 'Finish homework',
+    'due' => 'Today',
+    'assigned_to' => 'Jeffrey',
+    'completed' => false,
 ];
-
-$person['name'] = 'Jeffrey';
-
-unset($person['age']);
 
 require 'index.view.php';
