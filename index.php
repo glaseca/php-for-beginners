@@ -7,29 +7,10 @@ Instrucciones:
   http://localhost:8888
 */
 
-class Task {
-    public $description;
-    public $completed = false;
+require 'functions.php';
+require 'Task.php';
 
-    public function __construct($description){
-        $this->description = $description;
-    }
-
-    public function complete(){
-        $this->completed = true;
-    }
-
-    public function isComplete(){
-        return $this->completed;
-    }
-}
-
-$tasks = [
-    new Task ('Go to the store'), // 0
-    new Task ('Finish my screencast'), // 1
-    new Task ('Clean my room')  //2
-];
-
-$tasks[0]->complete();
+$pdo = connectToDb();
+$tasks = fetchAllTasks($pdo);
 
 require 'index.view.php';
