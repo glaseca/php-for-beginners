@@ -12,6 +12,10 @@
     </style>
 </head>
 <body>
+    <nav>
+        <li><a href="about">About Page</a></li>
+        <li><a href="contact-our-company">Contact Page</a></li>
+    </nav>
     <h1>Task For The Day</h1>
     <ul>
         <?php foreach($tasks as $task) : ?>
